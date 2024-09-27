@@ -1,9 +1,14 @@
 Name: YOUR NAME HERE
 
-| Date    |  Time  |                                     Update |
-|:--------|:------:|-------------------------------------------:|
-| April 5 | 9-10pm | I tried to write abstract, efficient code. |
-|         |        |                                            |
+| Date         |       Time       |                                                                                                                                                                                                                                                                   Update |
+|:-------------|:----------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| April 5      |      9-10pm      |                                                                                                                                                                                                                               I tried to write abstract, efficient code. |
+| September 23 |  12:40-1:10  am  |                                                                                                                     PLanning out what I plan on doing. Currently thinking of using binary search of finding if words ate in dictionary. Started coding the binary search |
+| Sebtember 23 | 1:10 - 1:40   pm |                                                                                              finished coding binary search for checking misspelled array and dictionary, but its not working so currently bug fixing the binary search since its causing a infinite loop |
+| Sebtember 25 | 10:50 - 11:20 am | Worked on fixing infinite loop bug realised that my binary search was wrong. I had a wrong base case/check and my changing end and start was wrong. Successfully fixed it, and passes test sentance, but since I dind't sort the check mispelled it won't pass test poem |
+| Sebtemper 25 |    9-9:30 pm     |                                                                                                                                                                   Worked on solving the sorting thing made first version of sort doesn't work gonna try and fix it later |
+| Sebtember 26 |    9-9:30 pm     |                                         Continuing to work on sort it still doesn't really worked I tried changing my base case cause I thought the orginaly was bad. Discovered the Java Collection class which has sort and binary search. Don't think I'll use it now |
+| Sebtember 26 |   9:30 - 10 pm   |                                                                                    Still working on sort now I think it's not sort thats the issue, but check misspelled since multiple duplicate are being passed into sort when the word should only be passed in once |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
