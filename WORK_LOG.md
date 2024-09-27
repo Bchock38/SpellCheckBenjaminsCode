@@ -9,7 +9,7 @@ Name: YOUR NAME HERE
 | Sebtemper 25 |    9-9:30 pm     |                                                                                                                                                                   Worked on solving the sorting thing made first version of sort doesn't work gonna try and fix it later |
 | Sebtember 26 |    9-9:30 pm     |                                         Continuing to work on sort it still doesn't really worked I tried changing my base case cause I thought the orginaly was bad. Discovered the Java Collection class which has sort and binary search. Don't think I'll use it now |
 | Sebtember 26 |   9:30 - 10 pm   |                                                                                    Still working on sort now I think it's not sort thats the issue, but check misspelled since multiple duplicate are being passed into sort when the word should only be passed in once |
-| Sebtember 26 |  10:50 - 11:05   |                                                                      After taking a break from C.S came back and worked a little more I feel clueless, so just gonna submit what I have now and hopefully a better way to sort/correct way will be taught in class later |
+| Sebtember 26 |  10:50 - 11:05   |                                                                     After taking a break from C.S came back and worked a little more I feel clueless, so just gonna submit what I have now and hopefully a better way to sort/correct way will be taught in class later. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
