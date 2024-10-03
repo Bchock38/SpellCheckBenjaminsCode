@@ -20,10 +20,24 @@ public class SpellCheck {
      * @param dictionary The list of all accepted words.
      * @return String[] of all mispelled words in the order they appear in text. No duplicates.
      */
-
     public String[] checkWords(String[] text, String[] dictionary) {
-        return null;
+        Trie dictionaryTrie = makeDictionaryTrie(dictionary);
+        ArrayList<String> mispelled = new ArrayList<String>();
+        for (String words : text){
+            if (!dictionaryTrie.lookUp(words)){
+                mispelled.add(words);
+            }
+        }
 
+        return mispelled.toArray(new String[0]);
+    }
+
+    public Trie makeDictionaryTrie(String[] dictionary){
+        Trie dictionaryTrie = new Trie();
+        for (String words : dictionary) {
+            dictionaryTrie.insert(words);
+        }
+        return dictionaryTrie;
     }
 }
 
