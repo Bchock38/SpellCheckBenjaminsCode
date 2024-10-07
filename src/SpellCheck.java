@@ -22,13 +22,14 @@ public class SpellCheck {
      */
     public String[] checkWords(String[] text, String[] dictionary) {
         Trie dictionaryTrie = makeDictionaryTrie(dictionary);
+        Trie mispelledTrie = new Trie ();
         ArrayList<String> mispelled = new ArrayList<String>();
         for (String words : text){
-            if (!dictionaryTrie.lookUp(words)){
+            if (!dictionaryTrie.lookUp(words) && !mispelledTrie.lookUp(words)){
+                mispelledTrie.insert(words);
                 mispelled.add(words);
             }
         }
-
         return mispelled.toArray(new String[0]);
     }
 
