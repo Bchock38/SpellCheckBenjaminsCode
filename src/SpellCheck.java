@@ -48,9 +48,9 @@ public class SpellCheck {
                 mispelled.add(words);
             }
         }
-        for (int i = 0; i < mispelled.size(); i++){
-            System.out.println(mispelled.get(i));
-        }
+//        for (int i = 0; i < mispelled.size(); i++){
+//            System.out.println(mispelled.get(i));
+//        }
         return mispelled.toArray(new String[0]);
     }
     public Trie makeDictionaryTrie(String[] dictionary){

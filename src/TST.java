@@ -1,18 +1,23 @@
 public class TST {
 
-    private Node root = new Node();
+    private Node root = new Node('a');
     private final int left = 0;
     private final int middle = 1;
     private final int right = 2;
     private class Node{
-
         char character;
         private Node[] children = new Node[3];
         Boolean isWord = false;
+        private Node(char a){
+            character = a;
+        }
+
     }
 
     public boolean lookUp(String toLookUp){
+//        System.out.println(toLookUp);
         return nodeGet(root,toLookUp,0);
+
     }
 
 
@@ -36,6 +41,7 @@ public class TST {
     }
 
     public void insert(String toPut){
+//        System.out.println(toPut);
         put(root, toPut, 0);
     }
 
@@ -44,37 +50,34 @@ public class TST {
             currentNode.isWord = true;
             return;
         }
-
+        char nextChar;
         char currentChar = toPut.charAt(depth);
-
+        if (depth+1 < toPut.length()){
+            nextChar = toPut.charAt(depth + 1);
+        }
+        else {
+            nextChar = toPut.charAt(depth);
+        }
+        if (currentNode.children[middle] == null) {
+            currentNode.children[middle] = new TST.Node(nextChar);
+            put(currentNode.children[middle], toPut, depth + 1);
+        }
         if (currentChar < currentNode.character) {
             if (currentNode.children[left] == null) {
-                currentNode.children[left] = new TST.Node();
-                currentNode.children[left].character = currentChar;
+                currentNode.children[left] = new TST.Node(currentChar);
             }
-            else if (currentChar == currentNode.children[left].character){
-                put(currentNode.children[left], toPut, depth + 1);
-            }
+            put(currentNode.children[left], toPut, depth);
+
 
         }
         else if (currentChar > currentNode.character) {
             if (currentNode.children[right] == null) {
-                currentNode.children[right] = new TST.Node();
-                currentNode.children[right].character = currentChar;
+                currentNode.children[right] = new TST.Node(currentChar);
             }
-            else if (currentChar == currentNode.children[right].character)
-            put(currentNode.children[right], toPut, depth + 1);
+            put(currentNode.children[right], toPut, depth);
         }
-        else {
-            if (currentNode.children[middle] == null) {
-                currentNode.children[middle] = new TST.Node();
-                currentNode.children[middle].character = currentChar;
-                put(currentNode.children[middle], toPut, depth + 1);
-            }
-            else{
-                put(currentNode.children[middle], toPut, depth);
-            }
-
+        else{
+            put(currentNode.children[middle],toPut,depth + 1);
         }
     }
 }
