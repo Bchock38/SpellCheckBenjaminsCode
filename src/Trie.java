@@ -11,9 +11,6 @@ public class Trie {
         return nodeGet(root,toLookUp,0);
     }
 
-    public void setIsWord(Node currentNode, boolean change){
-        currentNode.isword = change;
-    }
 
     private Boolean nodeGet(Node currentNode, String toLookUp, int depth){
         if (currentNode == null){
